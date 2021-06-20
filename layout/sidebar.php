@@ -42,12 +42,19 @@
                         <span>Matrik</span>
                     </a>
                 </li>
-
-                <li class="sidebar-item">
-                    <a href="preferensi.php" class='sidebar-link'>
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
                         <i class="bi bi-bar-chart-fill"></i>
                         <span>Nilai Preferensi</span>
                     </a>
+                    <ul class="submenu ">
+                        <li class="submenu-item ">
+                            <a href="preferensi.php">Hasil Preferensi</a>
+                        </li>
+                        <li class="submenu-item ">
+                            <a href="rangking.php">Rangking</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="sidebar-item">

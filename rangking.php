@@ -17,7 +17,7 @@ require "R.php";
           </a>
         </header>
         <div class="page-heading">
-          <h3>Nilai Preferensi (P)</h3>
+          <h3>Rangking</h3>
         </div>
         <div class="page-content">
           <section class="row">
@@ -25,7 +25,7 @@ require "R.php";
               <div class="card">
 
                 <div class="card-header">
-                  <h4 class="card-title">Tabel Nilai Preferensi (P)</h4>
+                  <h4 class="card-title">Tabel Nilai berdasarkan rangking nilai terbesar</h4>
                 </div>
                 <div class="card-content">
                   <div class="card-body">
@@ -52,7 +52,9 @@ $P = array();
 $m = count($W);
 $no = 0;
 $tampung = array();
+
 $nilai =0;
+
 foreach ($R as $i => $r) {
   for ($j = 0; $j < $m; $j++) {
       $hasil = $P[$i] = (isset($P[$i]) ? $P[$i] : 0) + $r[$j] * $W[$j];
@@ -60,18 +62,43 @@ foreach ($R as $i => $r) {
     }
 array_push($tampung,$hasil);
 };
-while ($row = $result->fetch_object()) {
+// rsort($tampung);
+
+$lastResults = array();
+
+foreach ($result as $index => $res) {
+  // echo json_encode($res['name']);
+  foreach($tampung as $index_tampung => $tam){
+    if($index_tampung === $index ){
+      // echo $tam;
+      $temp = [
+        'name' => $res['name'],
+        'nilai' => $tam
+      ];
+      array_push($lastResults,$temp);
+      $temp = '';
+    }
+    
+  }
+}
+
+$final = usort($lastResults['nilai'], function($a, $b){return strcmp($a->nilai, $b->nilai);});
+// echo $final; 
+
+foreach ($lastResults as $key => $lr) {
   echo "<tr class='center'>
     <td>" . (++$no) . "</td>";
-  echo "<td>{$row->name}</td>";
-  echo "<td>{$tampung[$nilai++]}</td>";
-};
+  echo "<td>{$lr['name']}</td>";
+  echo "<td>{$lr['nilai']}</td>";
+}
+
+// while ($lastResults > 0) {
+  
+// };
 
   
 
   echo    "</tr>";
-  rsort($tampung);
- // print_r($tampung);
 ?>
                     </table>
                   </div>

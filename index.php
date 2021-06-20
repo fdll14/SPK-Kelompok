@@ -24,28 +24,16 @@
                                 <div class="card-content">
                                     <div class="card-body">
                                         <p class="card-text">
-                                            Metode Simple Additive Weighting (SAW) sering juga dikenal istilah metode
-                                            penjumlahan terbobot. Konsep dasar metode SAW adalah mencari penjumlahan
-                                            terbobot dari rating kinerja pada setiap alternatif pada semua atribut
-                                            (Fishburn 1967). <br><br>
-                                            SAW dapat dianggap sebagai cara yang paling mudah dan
-                                            intuitif untuk menangani masalah Multiple Criteria Decision-Making MCDM,
-                                            karena fungsi linear additive dapat mewakili preferensi pembuat keputusan
-                                            (Decision-Making, DM).<br><br>
-                                            Hal tersebut dapat dibenarkan, namun, hanya ketika
-                                            asumsi preference independence (Keeney & Raiffa 1976) atau preference
-                                            separability (Gorman 1968) terpenuhi.
+                                            Sistem pendukung keputusan ini digunakan untuk menentukkan Study Club terbaik pada prodi Teknik Informatika. <br>
+                                            Untuk metode yang digunakan pada sistem pendukung keputusan ini menggunakan metode SAW (Simple Additive Weighting).<br><br>
                                         </p>
                                         <hr>
                                         <p class="card-text">
-                                            Langkah Penyelesaian Simple Additive Weighting (SAW) adalah sebagai berikut
-                                            :
+                                            Langkah penggunaan sistem pendukung keputusan ini sebagai berikut :
                                         </p>
                                         <ol type="1">
-                                            <li>Menentukan kriteria-kriteria yang akan dijadikan acuan dalam pengambilan
-                                                keputusan, yaitu Ci</i>
-                                            <li>Menentukan rating kecocokan setiap alternatif pada setiap kriteria (X).
-                                            </li>
+                                            <li>Menginputkan study club apa saja yang ada pada prodi Teknik Informatika pada menu alternatif.</i>
+                                            <li>Menginputkan kriteria apa saja yang dipertimbangan untuk menjadi pertimbangan serta bobot nilainya.</li>
                                             <li>Membuat matriks keputusan berdasarkan kriteria(Ci), kemudian melakukan
                                                 normalisasi matriks berdasarkan persamaan yang disesuaikan dengan jenis
                                                 atribut (atribut keuntungan ataupun atribut biaya) sehingga diperoleh
