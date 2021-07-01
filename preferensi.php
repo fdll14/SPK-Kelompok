@@ -30,7 +30,7 @@ require "R.php";
                 <div class="card-content">
                   <div class="card-body">
                     <p class="card-text">
-                    Nilai preferensi (P) merupakan penjumlahan dari perkalian matriks ternormalisasi R dengan vektor bobot W.</p>
+                    Nilai preferensi (P) merupakan penjumlahan dari perkalian matriks ternormalisasi dengan vektor bobot.</p>
                   </div>
                   <div class="table-responsive">
                     <table class="table table-striped mb-0">
@@ -66,7 +66,6 @@ while ($row = $result->fetch_object()) {
   echo "<td>{$row->name}</td>";
   echo "<td>{$tampung[$nilai++]}</td>";
 };
-
   
 
   echo    "</tr>";

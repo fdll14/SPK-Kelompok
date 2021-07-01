@@ -52,7 +52,7 @@
                             <a href="preferensi.php">Hasil Preferensi</a>
                         </li>
                         <li class="submenu-item ">
-                            <a href="rangking.php">Rangking</a>
+                            <a href="ranking.php">Ranking</a>
                         </li>
                     </ul>
                 </li>
